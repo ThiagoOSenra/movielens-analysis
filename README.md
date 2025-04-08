@@ -24,7 +24,7 @@ Este projeto tem como objetivo explorar e analisar a base de dados **MovieLens 1
 Filmes classificados como **Film-Noir**, **War** e **Drama** receberam, em média, as maiores notas. Isso pode indicar que esses gêneros possuem uma base de fãs mais engajada ou que os filmes disponíveis nessas categorias são, em geral, de alta qualidade.
 
 ### ⏱️ Média de Avaliações ao Longo do Tempo
-Foram observados flutuações nas médias de avaliação ao longo do tempo. Apesar de algumas quedas, há uma tendência geral de crescimento da média de notas, especialmente a partir do início de 1998, o que pode indicar uma mudança no perfil dos usuários ou nos filmes disponíveis na plataforma.
+Foram observadas flutuações nas médias de avaliação ao longo do tempo. Apesar de algumas quedas, há uma tendência geral de crescimento da média de notas, especialmente a partir do início de 1998, o que pode indicar uma mudança no perfil dos usuários ou nos filmes disponíveis na plataforma.
 
 ### 🔥 Popularidade por Gênero
 **Drama**, **Comedy** e **Action** são os gêneros mais populares em número de avaliações. Isso reflete sua ampla aceitação e presença no catálogo da base de dados.
