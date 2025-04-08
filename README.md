@@ -53,4 +53,4 @@ Foi aplicado o algoritmo **K-means** para segmentar os usuários com base na **m
    
 .   ┣ 📜 README.md 
    
-.     ┗ 📜 script_analise.R
+.     ┗ 📜 movielens-analysis.R
