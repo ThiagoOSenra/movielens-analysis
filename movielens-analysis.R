@@ -27,6 +27,8 @@ movies_long$genre <- genre_mapping[as.numeric(movies_long$genre)]
 ratings_genre <- ratings %>%
   inner_join(movies_long, by = "movie_id")
 
+###########################################################################################################
+
 # Análise 1: Média de avaliação por gênero
 genre_ratings <- ratings_genre %>%
   group_by(genre) %>%
@@ -39,7 +41,10 @@ ggplot(genre_ratings, aes(x = reorder(genre, avg_rating), y = avg_rating)) +
   labs(title = "Média de Avaliações por Gênero", x = "Gênero", y = "Média") +
   theme_minimal()
 
-# 📈 Análise 2: Evolução da média das avaliações ao longo do tempo
+
+################################################################################################################
+
+# Análise 2: Evolução da média das avaliações ao longo do tempo
 temporal_ratings <- ratings %>%
   mutate(date = floor_date(date, unit = "month")) %>%
   group_by(date) %>%
@@ -52,6 +57,9 @@ ggplot(temporal_ratings, aes(x = date, y = avg_rating)) +
   scale_x_datetime(date_labels = "%b/%y", date_breaks = "3 months") +
   theme_minimal()
 
+
+#################################################################################################################
+
 # Análise 3: Popularidade por gênero
 genre_popularity <- ratings_genre %>%
   count(genre, sort = TRUE)
@@ -62,11 +70,15 @@ ggplot(genre_popularity, aes(x = reorder(genre, n), y = n)) +
   labs(title = "Popularidade por Gênero", x = "Gênero", y = "Número de Avaliações") +
   theme_minimal()
 
+###############################################################################################################
+
 # Análise 4: Distribuição das avaliações
 ggplot(ratings, aes(x = rating)) +
   geom_bar(fill = "purple", alpha = 0.7) +
   labs(title = "Distribuição das Notas", x = "Nota", y = "Frequência") +
   theme_minimal()
+
+####################################################################################################################
 
 # Análise 5: Perfis de usuários
 user_profiles <- ratings_genre %>%
